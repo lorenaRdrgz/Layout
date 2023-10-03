@@ -1,0 +1,61 @@
+$color-principal: rgb(64, 64, 168);
+$color-texto: darkgray;
+
+.container-1 {
+    display: inline-flex;
+
+    .box {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        border: 1px solid lightgray;
+        border-radius: 10px;
+        height: 50px;
+        margin: 5px;
+        padding: 10px;
+    }
+
+    .color-box-text {
+        color: $color-texto;
+    }
+
+    .base-color {
+        background-color: $color-principal;
+
+        .color-box-text {
+            color: white;
+        }
+    }
+
+    .darken-4 {
+        background-color: darken($color-principal, 30%);
+    }
+
+    .darken-3 {
+        background-color: darken($color-principal, 20%);
+    }
+
+    .darken-2 {
+        background-color: darken($color-principal, 10%);
+    }
+
+    .darken-1 {
+        background-color: darken($color-principal, 5%);
+    }
+
+    .lighten-1 {
+        background-color: lighten($color-principal, 5%);
+    }
+
+    .lighten-2 {
+        background-color: lighten($color-principal, 10%);
+    }
+
+    .lighten-3 {
+        background-color: lighten($color-principal, 20%);
+    }
+
+    .lighten-4 {
+        background-color: lighten($color-principal, 30%);
+    }
+}

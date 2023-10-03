@@ -1,0 +1,40 @@
+$principal-font: Arial, Helvetica, sans-serif;
+$secondary-font: "Comic Sans MS", "Comic Sans";
+$principal-color: red;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: $principal-font;
+}
+
+.box {
+    border: 1px gray solid;
+    width: 200px;
+    height: 100px;
+
+    .text {
+        font-family: $secondary-font;
+    }
+
+}
+
+.base {
+    background-color: $principal-color;
+}
+
+.important {
+    background-color: darken($principal-color, 30%);
+}
+
+.warning {
+    background-color: lighten($principal-color, 30%);
+}
+
+.secondary-font {
+    font-family: $secondary-font;
+}
+
+.shadow {
+    box-shadow: -17px 22px 23px 0px rgba(0, 0, 0, 1);
+}
