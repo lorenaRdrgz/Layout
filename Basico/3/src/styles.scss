@@ -35,14 +35,13 @@
         @media screen and (max-width: 510px) {
             height: 50px;
             width: 100%;
-      }
+        }
     }
 
-    
     @media screen and (max-width: 510px) {
-          flex-wrap: nowrap;  
-          flex-direction: column;
-          height: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        height: auto;
     }
 
 }
