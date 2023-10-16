@@ -1,4 +1,4 @@
-@use 'styleB' as *;
+@use 'styleA' as *;
 
 .container {
     display: flex;
@@ -46,5 +46,18 @@
         width: 100%;
         align-items: center;
         justify-content: flex-start;
+    }
+}
+
+.secondary-font {
+    font-family: $font;
+}
+
+.shadow {
+    box-shadow: $box-shadow;
+
+    .text {
+        display: flex;
+        align-items: center;
     }
 }

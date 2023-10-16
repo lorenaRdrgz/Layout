@@ -4,19 +4,6 @@ $secondary-font: 'Courier New', Courier, monospace;
 $base-color: blue;
 $important-color: navy;
 $warning-color: aqua;
+$font: 'Times';
+$box-shadow: 10px 10px 10px;
 
-.secondary-font {
-    font: {
-        family: Times;
-        weight: bold;
-    }
-}
-
-.shadow {
-    box-shadow: 10px 10px 10px;
-
-    .text {
-        display: flex;
-        align-items: center;
-    }
-}
