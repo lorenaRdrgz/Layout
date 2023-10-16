@@ -1,63 +1,47 @@
-// $color-principal: rgb(64, 64, 168);
-// $color-principal: rgb(235, 54, 54);
-$color-principal: rgb(45, 170, 66);
+$color-base1: rgb(64, 64, 168);
+$color-base2: rgb(235, 54, 54);
+$color-base3: rgb(45, 170, 66);
 $color-texto: darkgray;
 
-.container-1 {
-    display: inline-flex;
+$colors: $color-base1, $color-base2, $color-base3;
 
-    .box {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        border: 1px solid lightgray;
-        border-radius: 10px;
-        height: 50px;
-        margin: 5px;
-        padding: 10px;
-    }
+body {
+    display: flex;
+    flex-direction: column;
+}
 
-    .color-box-text {
-        color: $color-texto;
-    }
+@for $k from 1 through length($colors) {
+    $color: nth($colors, $k);
 
-    .base-color {
-        background-color: $color-principal;
+    .container-#{$k} {
+        display: inline-flex;
 
-        .color-box-text {
-            color: white;
+        .box {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            height: 50px;
+            margin: 5px;
+            padding: 10px;
         }
     }
 
-    .darken-4 {
-        background-color: darken($color-principal, 30%);
-    }
+    @for $i from 1 through 4 {
+        .base-color#{$k} {
+            background-color: $color;
+            color: white;
+        }
 
-    .darken-3 {
-        background-color: darken($color-principal, 20%);
-    }
+        .container-#{$k} .darken-#{$i} {
+            background-color: darken($color, $i * 10%);
+            color: $color-texto;
+        }
 
-    .darken-2 {
-        background-color: darken($color-principal, 10%);
-    }
-
-    .darken-1 {
-        background-color: darken($color-principal, 5%);
-    }
-
-    .lighten-1 {
-        background-color: lighten($color-principal, 5%);
-    }
-
-    .lighten-2 {
-        background-color: lighten($color-principal, 10%);
-    }
-
-    .lighten-3 {
-        background-color: lighten($color-principal, 20%);
-    }
-
-    .lighten-4 {
-        background-color: lighten($color-principal, 30%);
+        .container-#{$k} .lighten-#{$i} {
+            background-color: lighten($color, $i * 10%);
+            color: $color-texto;
+        }
     }
 }
