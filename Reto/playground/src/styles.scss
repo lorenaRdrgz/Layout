@@ -1,0 +1,95 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Jost', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #141414;
+    color: white;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    background-color: #141414;
+    top: 0;
+}
+
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & img {
+        width: 75px;
+        margin: 10px;
+    }
+}
+
+.header-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 50%;
+        border-radius: 5px;
+        text-align: center;
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    & div:hover {
+        background-color: white;
+        color: black;
+    }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    & .top {
+        display: flex;
+        flex-direction: row-reverse;
+
+
+        & .top-item img {
+            width: 100%;
+            margin: 10px 0px;
+        }
+    }
+
+    & .first, .second {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+    }
+
+}
+
+.top-text {
+    font-weight: 400;
+}
+
+.item {
+    transition: all 1s;
+}
+
+.item:hover {
+    transform: scale(1.2);
+}
+
+@media screen and (min-width: 1280px) {
+    .item img {
+        min-width: 250px;
+    }
+}
